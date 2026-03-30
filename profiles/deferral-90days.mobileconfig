@@ -5,24 +5,26 @@
   <key>PayloadContent</key>
   <array>
     <dict>
-      <key>PayloadType</key><string>com.apple.applicationaccess</string>
-      <key>PayloadVersion</key><integer>1</integer>
+      <key>PayloadDisplayName</key>
+      <string>Restrictions</string>
       <key>PayloadIdentifier</key><string>org.stayonx.restrictions</string>
       <key>PayloadUUID</key><string>PAYLOAD-UUID</string>
-      <key>PayloadEnabled</key><true/>
-      <key>PayloadDisplayName</key><string>Stay On Current Major OS</string>
-
+      <key>PayloadType</key><string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key><integer>1</integer>
       <!-- Defer Major OS upgrade -->
       <key>forceDelayedMajorSoftwareUpdates</key><true/>
       <key>enforcedSoftwareUpdateMajorOSDeferredInstallDelay</key><integer>90</integer>
     </dict>
   </array>
-
+  <key>PayloadDisplayName</key><string>Stay On Current Major OS</string>
+  <key>PayloadIdentifier</key><string>org.stayonx.profile</string>
+  <key>PayloadScope</key>
+  <string>System</string>
+  <key>PayloadUUID</key><string>PROFILE-UUID</string>
   <key>PayloadType</key><string>Configuration</string>
   <key>PayloadVersion</key><integer>1</integer>
-  <key>PayloadIdentifier</key><string>org.stayonx.profile</string>
-  <key>PayloadUUID</key><string>PROFILE-UUID</string>
-  <key>PayloadDisplayName</key><string>Stay On Current Major OS</string>
   <key>PayloadOrganization</key><string>StayOnX</string>
+  <key>TargetDeviceType</key>
+  <integer>5</integer>
 </dict>
 </plist>
