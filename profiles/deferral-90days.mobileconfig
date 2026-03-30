@@ -10,16 +10,11 @@
       <key>PayloadIdentifier</key><string>org.stayonx.restrictions</string>
       <key>PayloadUUID</key><string>PAYLOAD-UUID</string>
       <key>PayloadEnabled</key><true/>
-      <key>PayloadDisplayName</key><string>Software Update Deferrals</string>
+      <key>PayloadDisplayName</key><string>Stay On Current Major OS</string>
 
-      <!-- Major upgrade deferral -->
+      <!-- Defer Major OS upgrade -->
       <key>forceDelayedMajorSoftwareUpdates</key><true/>
       <key>enforcedSoftwareUpdateMajorOSDeferredInstallDelay</key><integer>90</integer>
-
-      <!-- Optional (set to your taste) -->
-      <key>forceDelayedSoftwareUpdates</key><true/>
-      <key>enforcedSoftwareUpdateMinorOSDeferredInstallDelay</key><integer>30</integer>
-      <key>enforcedSoftwareUpdateNonOSDeferredInstallDelay</key><integer>30</integer>
     </dict>
   </array>
 
@@ -27,7 +22,7 @@
   <key>PayloadVersion</key><integer>1</integer>
   <key>PayloadIdentifier</key><string>org.stayonx.profile</string>
   <key>PayloadUUID</key><string>PROFILE-UUID</string>
-  <key>PayloadDisplayName</key><string>Stay on Sequoia: Update Deferrals</string>
+  <key>PayloadDisplayName</key><string>Stay On Current Major OS</string>
   <key>PayloadOrganization</key><string>StayOnX</string>
 </dict>
 </plist>
