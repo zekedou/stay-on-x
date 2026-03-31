@@ -2,36 +2,34 @@
 
 Stay on current major version of macOS.
 
-## ⚙️ What This Does
+---
 
-Apple allows deferring major macOS upgrades using configuration profiles with official `com.apple.applicationaccess` keys. This repo provides a **90-day deferral profile** along with scripts to install, check status, and uninstall it.
-
-After the 90-day deferral period expires, you will need to reinstall the profile.
+## Details
 
 <details>
-<summary>💀 Bad news</summary>
+<summary>🔍 How it works?</summary>
 
-All values for SoftwareUpdate, the payload that configures the software update policy, [appear to be depreciated in macOS 26](https://developer.apple.com/documentation/devicemanagement/softwareupdate).
-
-This means this project is only useful for macOS versions prior to macOS 26.
-
-</details>
-
-<details>
-<summary>🔍 What the deferral profile actually does</summary>
-
-It uses Apple's official deferral keys:
+It uses configuration profiles to defer major macOS upgrades.
 
 ```xml
 <key>forceDelayedMajorSoftwareUpdates</key><true/>
 <key>enforcedSoftwareUpdateMajorOSDeferredInstallDelay</key><integer>90</integer>
 ```
 
-These settings hide major upgrades from Software Update for **up to 90 days** according to Apple's documentation. In practice, the deferral appears to continue working beyond that window — but your mileage may vary.
+Above settings hide major upgrades from Software Update for **up to 90 days** according to Apple's documentation. In practice, the deferral appears to continue working beyond that window — but your mileage may vary.
+
+After the deferral period expires, you will need to reinstall the profile.
 
 </details>
 
----
+<details>
+<summary>💀 Bad news!</summary>
+
+All values for SoftwareUpdate, the payload that configures the software update policy, [appear to be depreciated in macOS 26](https://developer.apple.com/documentation/devicemanagement/softwareupdate).
+
+This means this project is only useful for macOS versions prior to macOS 26.
+
+</details>
 
 ## 🧰 Quick Start
 
