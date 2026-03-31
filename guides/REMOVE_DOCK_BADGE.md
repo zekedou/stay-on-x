@@ -1,5 +1,7 @@
 # Remove the Red Badge from the System Settings Dock Icon
 
+Get rid of the persistent notification badge on the System Settings icon in your Dock.
+
 If you're tired of the persistent red notification badge on the **System Settings** icon in your Dock (indicating a software update is available), this guide walks you through removing it.
 
 > **Note:** The "Software Update Available (1)" entry will still appear inside the System Settings sidebar — this only removes the red badge from the Dock icon.

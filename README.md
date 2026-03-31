@@ -65,16 +65,8 @@ The script will generate unique identifiers to prevent conflicts and attempt to 
 
 ## 📖 Guides
 
-- [Remove the Red Badge from the System Settings Dock Icon](./docs/REMOVE_DOCK_BADGE.md) — Get rid of the persistent notification badge on the System Settings icon in your Dock
-
-## 🧩 What's Next? (Help Wanted)
-
-The 90-day deferral profile works well today, but there are open questions the community can help answer:
-
-- **How long does the deferral actually last?** Apple says 90 days, but anecdotal experience suggests it may persist longer. More data points would be valuable.
-- **Can we suppress the Settings badge and upgrade prompts?** The red notification badge and "Install Now" prompts are a separate annoyance.
-- **Are there other safe, reversible approaches?** If you've found something that works, we'd love to hear about it.
-- **What changes with new macOS versions?** Apple may change deferral behavior in future releases.
+- [Remove the Red Badge from the System Settings Dock Icon](./guides/REMOVE_DOCK_BADGE.md)
+- [Remove upgrade prompts](./guides/REMOVE_UPGRADE_PROMPTS.md)
 
 ## 🧾 License
 
