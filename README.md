@@ -1,21 +1,12 @@
-# 🛑 Stop Tahoe Update
+# 🛑 Stay On X
 
-_A community-led effort to block unwanted macOS upgrades (e.g. Sequoia → Tahoe)._
-
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-blue.svg)](.github/CONTRIBUTING.md)
-[![GitHub Discussions](https://img.shields.io/github/discussions/travisvn/stop-tahoe-update?logo=github)](https://github.com/travisvn/stop-tahoe-update/discussions)
-[![Build & Validate](https://github.com/travisvn/stop-tahoe-update/actions/workflows/validate.yml/badge.svg)](https://github.com/travisvn/stop-tahoe-update/actions)
-
-> Safe • Transparent • Reversible
-> 
-> Everything here is inspectable and easy to undo.
-
----
+Stay on current major version of macOS.
 
 ## ⚙️ What This Does
 
 Apple allows deferring major macOS upgrades using configuration profiles with official `com.apple.applicationaccess` keys. This repo provides a **90-day deferral profile** along with scripts to install, check status, and uninstall it.
+
+After the 90-day deferral period expires, you will need to reinstall the profile.
 
 <details>
 <summary>🔍 What the deferral profile actually does</summary>
@@ -35,24 +26,19 @@ These settings hide major upgrades from Software Update for **up to 90 days** ac
 
 ## 🧰 Quick Start
 
-### 1. Clone or download the repo
+### 1. Clone the repo
 
 ```bash
-git clone https://github.com/travisvn/stop-tahoe-update.git
-cd stop-tahoe-update
+git clone https://github.com/zekedou/stay-on-x.git
+cd stay-on-x
 ```
 
-Ensure the scripts are executable:
-```bash
-chmod +x ./scripts/*.sh
-```
-
-### 2. Apply the 90-day deferral profile
+### 2. Install it
 
 The script will generate unique identifiers to prevent conflicts and attempt to install the profile.
 
 ```bash
-./scripts/install-profile.sh profiles/deferral-90days.mobileconfig
+./scripts/install-profile.sh
 ```
 
 > [!NOTE]
@@ -64,19 +50,15 @@ The script will generate unique identifiers to prevent conflicts and attempt to 
 ./scripts/status.sh
 ```
 
-### 4. Remove later if needed
+### 4. Uninstall it
 
 ```bash
 ./scripts/uninstall-profile.sh
 ```
 
----
-
 ## 📖 Guides
 
 - [Remove the Red Badge from the System Settings Dock Icon](./docs/REMOVE_DOCK_BADGE.md) — Get rid of the persistent notification badge on the System Settings icon in your Dock
-
----
 
 ## 🧩 What's Next? (Help Wanted)
 
@@ -87,43 +69,6 @@ The 90-day deferral profile works well today, but there are open questions the c
 - **Are there other safe, reversible approaches?** If you've found something that works, we'd love to hear about it.
 - **What changes with new macOS versions?** Apple may change deferral behavior in future releases.
 
-If you have findings, ideas, or just want to share your experience, open a [Discussion](https://github.com/travisvn/stop-tahoe-update/discussions) or submit a PR.
-
----
-
-## 🧑‍💻 Contributing
-
-We welcome contributions of all kinds:
-
-- **Testing** — verify the profile works on your macOS version and report results
-- **Research** — document macOS update behavior, deferral edge cases, or new Apple keys
-- **Scripts & tooling** — improve the install/uninstall experience
-- **Ideas** — propose approaches for suppressing prompts or extending deferrals
-
-📄 See [CONTRIBUTING.md](./.github/CONTRIBUTING.md) and [docs/GOALS.md](./docs/GOALS.md).
-
----
-
-## ⚖️ Safety Philosophy
-
-- **No surprises** — every approach is documented and well-understood before it ships
-- **Community-reviewed** — all code goes through PR review
-
----
-
-## 🗺️ Beyond Tahoe
-
-While this repo focuses on **Sequoia → Tahoe**, the long-term goal is a general-purpose toolkit for macOS users who want to choose when — or if — they upgrade.
-
----
-
-## 💬 Community & Support
-
-- [GitHub Discussions](https://github.com/travisvn/stop-tahoe-update/discussions) — share findings, test results, and ideas
-- [Issues](https://github.com/travisvn/stop-tahoe-update/issues) — report bugs or problems with the scripts/profiles
-
----
-
 ## 🧾 License
 
-**MIT License** — simple, permissive, and open.
+MIT
