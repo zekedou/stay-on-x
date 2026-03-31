@@ -9,6 +9,15 @@ Apple allows deferring major macOS upgrades using configuration profiles with of
 After the 90-day deferral period expires, you will need to reinstall the profile.
 
 <details>
+<summary>💀 Bad news</summary>
+
+All values for SoftwareUpdate, the payload that configures the software update policy, [appear to be depreciated in macOS 26](https://developer.apple.com/documentation/devicemanagement/softwareupdate).
+
+This means this project is only useful for macOS versions prior to macOS 26.
+
+</details>
+
+<details>
 <summary>🔍 What the deferral profile actually does</summary>
 
 It uses Apple's official deferral keys:
