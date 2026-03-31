@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
+
 set -euo pipefail
+
 PROFILE="${1:-profiles/deferral-90days.mobileconfig}"
 
 if [[ ! -f "$PROFILE" ]]; then

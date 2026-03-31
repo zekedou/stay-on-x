@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
+
 set -euo pipefail
+
 IDENTIFIER="${1:-org.stayonx.profile}"
 echo "Removing profile identifier: $IDENTIFIER"
 sudo /usr/bin/profiles remove -identifier "$IDENTIFIER" || true
